@@ -6,7 +6,7 @@
     
     
 
-    <title>Blog Template for Bootstrap</title>
+    <title>The Learn PHP Blog</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
