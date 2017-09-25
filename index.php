@@ -100,7 +100,7 @@
             <p><em>PHP is a popular general-purpose scripting language that is especially suited to web development.</em> </p>
           </div>
           <div class="sidebar-module">
-            <h4>Archives</h4>
+            <h4>Categories</h4>
             <ol class="list-unstyled">
               <li><a href="#">News</a></li>
               <li><a href="#">Events</a></li>
@@ -118,7 +118,7 @@
     </div><!-- /.container -->
 
     <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>The Learn PHP Blog 2017.</p>
       <p>
         <a href="#">Back to top</a>
       </p>
