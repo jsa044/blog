@@ -47,6 +47,14 @@ class Database {
 	
 	public function insert($query){
 		$insert_row = $this->link->query($query) or die($this->error.__LINE__);
+		
+	//Validate Insert
+	if($insert_row) {
+		header("Location:  index.php?msg=" .urlencode('Record Added'));		
+	} else {
+		die('Error : ('. $this->link->errno .') '. $this->link->error);
+	}
+			
 	}
 }
   ?>
