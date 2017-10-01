@@ -18,8 +18,8 @@
             <h2 class="blog-post-title"><?php  echo $row['title'];   ?></h2>
             <p class="blog-post-meta"><?php echo formatDate($row['date']);    ?> by <a href="#">Mark</a></p>            
             <hr>
-            <p><?php  echo $row['body'];   ?></p>
-            <a class="readmore" href="post.php?id=1">Read More...</a>
+            <p><?php  echo shortenText($row['body']);   ?></p>
+            <a class="readmore" href="post.php?id=<?php  echo $row['id'];  ?>">Read More...</a>
           </div><!-- /.blog-post -->
   <?php endwhile;  ?>
           
