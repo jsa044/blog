@@ -10,7 +10,12 @@
 		  //Create Query
 		  $query = "SELECT * FROM posts";
 		  //Run Query
-		  $posts = $db->select($query);		  
+		  $posts = $db->select($query);	
+		  
+		    //Create Query
+		  $query = "SELECT * FROM categories";
+		  //Run Query
+		  $categories = $db->select($query);		  
   ?>
   <?php if($posts) : ?>
   <?php  while($row = $posts->fetch_assoc()) :   ?>	
@@ -19,7 +24,7 @@
             <p class="blog-post-meta"><?php echo formatDate($row['date']);    ?> by <a href="#">Mark</a></p>            
             <hr>
             <p><?php  echo shortenText($row['body']);   ?></p>
-            <a class="readmore" href="post.php?id=<?php  echo $row['id'];  ?>">Read More...</a>
+            <a class="readmore" href="post.php?id=<?php  echo urlencode($row['id']);  ?>">Read More...</a>
           </div><!-- /.blog-post -->
   <?php endwhile;  ?>
           
