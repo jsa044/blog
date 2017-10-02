@@ -3,7 +3,7 @@
 <div class="col-sm-3 offset-sm-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
-            <p><em>PHP is a popular general-purpose scripting language that is especially suited to web development.</em> </p>
+            <p><?php echo $sitedescription;  ?> </p>
           </div>
           <div class="sidebar-module">
             <h4>Categories</h4>
