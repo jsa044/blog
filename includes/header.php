@@ -25,7 +25,7 @@
 
     <div class="blog-masthead">
       <div class="container">
-        <nav class="nav">
+        <nav class="navbar">
           <a class="nav-link active" href="index.php">Home</a>
           <a class="nav-link" href="posts.php">All Posts</a>
           
