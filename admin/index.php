@@ -1,6 +1,6 @@
-<?php include "config/config.php"; ?>
-<?php include "libraries/Database.php";   ?>
-<?php include "helpers/format_helper.php";  ?>
+<?php include "../config/config.php"; ?>
+<?php include "../libraries/Database.php";   ?>
+<?php include "../helpers/format_helper.php";  ?>
 
 
 <!DOCTYPE html>
@@ -11,14 +11,14 @@
     
     
 
-    <title>The Learn PHP Blog</title>
+    <title>Admin Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 	
 
     <!-- Custom styles for this template -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
   </head>
 
   <body>
@@ -40,7 +40,6 @@
         <p class="lead blog-description">PHP News, Tutorials, Videos and more.</p>
       </div>
     </div>
-
     <div class="container">
 
       <div class="row">
@@ -53,32 +52,12 @@
 
 
 
-</div><!-- /.blog-main -->
-<div class="col-sm-3 offset-sm-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p><?php echo $sitedescription;  ?> </p>
-          </div>
-          <div class="sidebar-module">
-            <h4>Categories</h4>
-            <?php    if($category)  :      ?>
-            <ol class="list-unstyled">
-            	<?php  while($row = $category->fetch_assoc()) : ?>
-              <li><a href="posts.php?category=<?php echo $row['id']; ?>"><?php echo $row['name']; ?></a></li>
-               <?php endwhile;  ?>             
-            </ol>
-            <?php  else :    ?>
-            	 <p>There are no categories yet.</p>
-            	 
-            	
-            <?php   endif;      ?>	
-          </div>
-          
-        </div><!-- /.blog-sidebar -->
+        </div><!-- /.blog-main -->
 
-      </div><!-- /.row -->
 
-    </div><!-- /.container -->
+    </div><!-- /.row -->
+
+   </div><!-- /.container -->
 
     <footer class="blog-footer">
       <p>The Learn PHP Blog 2017.</p>
