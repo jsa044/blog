@@ -3,7 +3,7 @@
 
    <div class="container">
   
-  <form method="post" action="/add_post.php">
+  <form method="post" action="/edit_post.php">
     <div class="form-group">
       <label >Post Title</label>
       <input name="title" type="text" class="form-control"  placeholder="Enter Title" >
@@ -43,8 +43,11 @@
     
     
      <div>
-    <button name="submit"  type="submit" class="btn btn-default">Submit</button>    
+    <input name="submit"  type="submit" class="btn btn-default" value="Submit">    
     <a href="index.php" class="btn btn-default">Cancel</a>
+    <input name="delete"  type="submit" class="btn btn-danger" value="Delete">  
+    
+    
     </div>
   </form>
 </div> </br>   <!--Container Div-->

@@ -43,7 +43,7 @@
     
     
      <div>
-    <button name="submit"  type="submit" class="btn btn-default">Submit</button>    
+    <input name="submit"  type="submit" class="btn btn-default" value="Submit">        
     <a href="index.php" class="btn btn-default">Cancel</a>
     </div>
   </form>
