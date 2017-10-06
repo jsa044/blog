@@ -17,9 +17,10 @@
 		  $categories = $db->select($query);		  
   ?>
 
-   <div class="container">
+<div class="container">
   
   <form method="post" action="/edit_post.php">
+  	
     <div class="form-group">
       <label >Post Title</label>
       <input name="title" type="text" class="form-control"  placeholder="Enter Title" value="<?php echo $post['title'] ?>">
@@ -47,14 +48,18 @@
       </select>
     </div>   
     
+    
+    <div class="form-group">
+      <label >Author</label>
+      <input name="author" type="text" class="form-control"  placeholder="Enter Name" value="<?php echo $post['author'] ?>">
+    
+    
     <div class="form-group">
       <label >Tags</label>
       <input name="tags" type="text" class="form-control"  placeholder="Enter Tags" value="<?php echo $post['tags'] ?>">
     </div>   
     
-    <div class="form-group">
-      <label >Author</label>
-      <input name="author" type="text" class="form-control"  placeholder="Enter Name" value="<?php echo $post['author'] ?>">
+    
     </div>   
     
     
