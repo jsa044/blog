@@ -1,32 +1,43 @@
 <?php include "includes/header.php";    ?>
 
+<?php  
+          $id = $_GET['id'];
+
+          //Create Database object
+          $db = new Database();
+		  
+		  //Create Query
+		  $query = "SELECT * FROM posts WHERE id =" .$id;
+		  //Run Query
+		  $post = $db->select($query)->fetch_assoc();	
+		  
+		    //Create Query
+		  $query = "SELECT * FROM categories";
+		  //Run Query
+		  $categories = $db->select($query);		  
+  ?>
 
    <div class="container">
   
   <form method="post" action="/edit_post.php">
     <div class="form-group">
       <label >Post Title</label>
-      <input name="title" type="text" class="form-control"  placeholder="Enter Title" >
+      <input name="title" type="text" class="form-control"  placeholder="Enter Title" value="<?php echo $post['title'] ?>">
     </div>    
     
     
     <div class="form-group">
       <label >Post Body</label>
-      <textarea name="body" class="form-control"  placeholder="Enter Post" ></textarea>
+      <textarea name="body" class="form-control"  placeholder="Enter Post" ><?php echo $post['body'] ?></textarea>
     </div>    
     
     
     <div class="form-group">
       <label >Category</label>
-      <select name="category" class="form-control">
-      	
-      	<option>News</option>
-      	<option>Events</option>
-      	<option>3</option>
-      	<option>4</option>
-      	<option>5</option>    	
-      	
-      	
+      <select name="category" class="form-control" >
+      	<?php  while($row = $categories->fetch_assoc())  :  ?>
+      	<option><?php  echo $row['name']; ?></option>
+      	<?php  endwhile; ?>      	
       </select>
     </div>   
     

@@ -1,12 +1,15 @@
 <?php include "includes/header.php";    ?>
+
 <?php    
    //Create DB Objext
    $db = new Database;
    // Get posts
-   $query = "SELECT * FROM posts";
-   $posts = $db->select($query)   
- ?>  
-        	
+   $query = "SELECT posts.*, categories.name FROM posts INNER JOIN categories ON  posts.category = categories.id";
+   $posts = $db->select($query); 
+   
+   $query  = "SELECT * FROM categories";
+   $categories = $db->select($query);
+   ?>	
     
 <div class="container">
 <table class="table table-striped">
@@ -17,14 +20,18 @@
    	   <th>Post  Author</th>
    	   <th>Post  Date</th>   	
    </tr>
-   <tr>
+   
    	   <?php  while($row = $posts->fetch_assoc()) :    ?>
-       <td></td>
-       <td></td>
-       <td></td>
-       <td></td>       
+   	   	<tr>
+       <td><?php echo $row['id'];?></td>
+       <td><a href="edit_post.php?id=<?php echo $row['id'];?>"><?php echo $row['title'];?></a></td>
+       <td><?php echo $row['name'];?></td>
+       <td><?php echo $row['author'];?></td>
+       <td><?php echo formatDate($row['date']);?></td>
+       </tr>
+              
    	   <?php  endwhile; ?>
-   </tr>
+   
    </table>
    
    <table class="table table-striped">
@@ -33,11 +40,14 @@
    	   <th>Category Name</th>
    	   	
    </tr>
-   <tr>
-       <td>Static Content</td>
-   	   <td>Static Content</td>
-   	   
-   </tr>
+   <?php  while($row = $categories->fetch_assoc()) :    ?>
+   	   	<tr>
+       <td><?php echo $row['id'];?></td>
+       <td><a href="edit_category.php?=<?php echo $row['id'];?>"><?php echo $row['name'];?></a></td>
+       
+       </tr>
+              
+   	   <?php  endwhile; ?>
    </table>
    
    
