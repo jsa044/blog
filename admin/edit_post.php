@@ -35,20 +35,26 @@
     <div class="form-group">
       <label >Category</label>
       <select name="category" class="form-control" >
+      	
       	<?php  while($row = $categories->fetch_assoc())  :  ?>
-      	<option><?php  echo $row['name']; ?></option>
+      		<?php  if($row['id'] == $post['category']) {
+      			 $selected = 'selected';				
+      		}       else { $selected = '';   	         }		
+			
+      		?>	      		
+      	    <option <?php echo $selected;?> ><?php  echo $row['name']; ?></option>
       	<?php  endwhile; ?>      	
       </select>
     </div>   
     
     <div class="form-group">
       <label >Tags</label>
-      <input name="tags" type="text" class="form-control"  placeholder="Enter Tags" >
+      <input name="tags" type="text" class="form-control"  placeholder="Enter Tags" value="<?php echo $post['tags'] ?>">
     </div>   
     
     <div class="form-group">
       <label >Author</label>
-      <input name="author" type="text" class="form-control"  placeholder="Enter Name" >
+      <input name="author" type="text" class="form-control"  placeholder="Enter Name" value="<?php echo $post['author'] ?>">
     </div>   
     
     
