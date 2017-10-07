@@ -43,7 +43,7 @@
    <?php  while($row = $categories->fetch_assoc()) :    ?>
    	   	<tr>
        <td><?php echo $row['id'];?></td>
-       <td><a href="edit_category.php?=<?php echo $row['id'];?>"><?php echo $row['name'];?></a></td>
+       <td><a href="edit_category.php?id=<?php echo $row['id'];?>"><?php echo $row['name'];?></a></td>
        
        </tr>
               

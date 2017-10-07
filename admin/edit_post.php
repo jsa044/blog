@@ -1,5 +1,4 @@
 <?php include "includes/header.php";    ?>
-
 <?php  
           $id = $_GET['id'];
 
