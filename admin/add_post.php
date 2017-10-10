@@ -1,9 +1,18 @@
 
 <?php include "includes/header.php";    ?>
-<?php  
-          //Create Database object
+<?php 
+
+   //Create Database object
           $db = new Database();
-		  
+
+   if(isset($_POST['submit']))  {
+   	
+	  $title= mysqli_real_escape_string($_POST['title']);
+	
+   }
+
+ ?>
+<?php  		  
 		 	  
 		    //Create Query
 		  $query = "SELECT * FROM categories";
@@ -13,7 +22,7 @@
 
    <div class="container">
   
-  <form method="post" action="/add_post.php">
+  <form method="post" action="add_post.php">
     <div class="form-group">
       <label >Post Title</label>
       <input name="title" type="text" class="form-control"  placeholder="Enter Title" >
