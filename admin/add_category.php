@@ -1,5 +1,36 @@
 <?php include "includes/header.php";    ?>
 
+
+<?php 
+
+   //Create Database object
+          $db = new Database();
+
+   if(isset($_POST['submit']))  {
+   	
+	  $name= mysqli_real_escape_string($db->link, $_POST['name']);
+	   
+	   
+	   //Basic Validation
+	   
+	   if ($name=='') {
+	   	
+		//Set error message
+		$error= 'Please fill out all required fields';
+		
+	   } else {
+	   	   $query = "INSERT INTO posts 
+	   	                    (title,body,category,author,tags)
+	   	   VALUES('$title', '$body',  $category, '$author', '$tags')";
+		   
+		   $insert_row = $db->insert($query);
+	   }
+	
+   }
+
+ ?>
+
+
 <form role="form" method='post' action='add_category.php'>
 	<div class="form-group">
 		<label>Category Name</label>
