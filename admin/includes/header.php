@@ -45,6 +45,6 @@
         <div class="col-sm-12 blog-main">
         	
 <?php  if(isset($_GET['msg']))  :  ?>
-	<div class="alert alert-sucess"><?php echo htmlentities($_Get['msg']);  ?></div>
+	<div class="alert alert-success"><?php echo $_GET['msg'];  ?></div>
 
 <?php endif;  ?>

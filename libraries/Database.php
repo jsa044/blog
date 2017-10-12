@@ -50,7 +50,7 @@ class Database {
 		
 	//Validate Insert
 	if($insert_row) {
-		header("Location:  index.php?msg=" .urlencode('Record Added'));
+		header("Location:  index.php?msg=" .urlencode('Record Added!'));
 		exit();		
 	} else {
 		die('Error : ('. $this->link->errno .') '. $this->link->error);
@@ -65,7 +65,7 @@ class Database {
 		
 	//Validate Insert
 	if($update_row) {
-		header("Location:  index.php?msg=" .urlencode('Record Updated'));
+		header("Location:  index.php?msg=" .urlencode('Record Updated!'));
 		exit();		
 	} else {
 		die('Error : ('. $this->link->errno .') '. $this->link->error);

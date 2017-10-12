@@ -19,11 +19,11 @@
 		$error= 'Please fill out all required fields';
 		
 	   } else {
-	   	   $query = "INSERT INTO posts 
-	   	                    (title,body,category,author,tags)
-	   	   VALUES('$title', '$body',  $category, '$author', '$tags')";
+	   	   $query = "INSERT INTO categories 
+	   	                    (name)
+	   	   VALUES('$name')";
 		   
-		   $insert_row = $db->insert($query);
+		   $update_row = $db->update($query);
 	   }
 	
    }
