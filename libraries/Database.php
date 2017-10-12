@@ -46,7 +46,7 @@ class Database {
 	//Insert Method
 	
 	public function insert($query){
-		$insert_row = $this->link->query($query) or die($this->error.__LINE__);
+		$insert_row = $this->link->query($query) or die($this->link->error.__LINE__);
 		
 	//Validate Insert
 	if($insert_row) {

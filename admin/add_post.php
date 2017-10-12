@@ -13,6 +13,20 @@
 	   $author= mysqli_real_escape_string($db->link, $_POST['author']);
 	   $tags= mysqli_real_escape_string($db->link, $_POST['tags']);
 	   
+	   //Basic Validation
+	   
+	   if ($title=='' || $body=='' || $category=='' || $author=='') {
+	   	
+		//Set error message
+		$error= 'Please fill out all required fields';
+		
+	   } else {
+	   	   $query = "INSERT INTO posts 
+	   	                    (title,body,category,author,tags)
+	   	   VALUES('$title', '$body',  $category, '$author', '$tags')";
+		   
+		   $insert_row = $db->insert($query);
+	   }
 	
    }
 
@@ -50,7 +64,7 @@
       		}       else { $selected = '';   	         }		
 			
       		?>	      		
-      	    <option <?php echo $selected;?> ><?php  echo $row['name']; ?></option>
+      	    <option <?php echo $selected;?> value='<?php  echo $row['id']; ?>' ><?php  echo $row['name']; ?></option>
       	<?php  endwhile; ?>      	
       </select>
     </div>   
