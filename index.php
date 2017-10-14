@@ -5,7 +5,7 @@
           $db = new Database();
 		  
 		  //Create Query
-		  $query = "SELECT * FROM posts";
+		  $query = "SELECT * FROM posts ORDER BY id DESC";
 		  //Run Query
 		  $posts = $db->select($query);	
 		  
@@ -24,7 +24,7 @@
             <h2 class="blog-post-title"><?php  echo $row['title'];   ?></h2>
             <p class="blog-post-meta"><?php echo formatDate($row['date']);    ?> by <a href="#"><?php echo $row['author'];   ?></a></p>            
             <hr>
-            <?php  echo shortenText($row['body']);   ?>
+            <?php  echo  shortenText($row['body']);?>
             <a class="readmore" href="post.php?id=1"<?php  echo urlencode($row['id']);  ?>">Read More...</a>
           </div><!-- /.blog-post -->
   <?php endwhile;  ?>

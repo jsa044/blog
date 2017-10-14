@@ -42,7 +42,7 @@
 	   	                   tags = '$tags'
 	   	                   WHERE id = "  .$id;
 		   
-		   $update_row = $db->delete($query);
+		   $update_row = $db->update($query);
 	   }
 	
    }
