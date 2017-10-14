@@ -1,6 +1,6 @@
 <?php include "includes/header.php";    ?>
 <?php  
-          $id = $_GET['id'];
+         $id = $_GET['id'];
 
           //Create Database object
           $db = new Database();
@@ -41,8 +41,8 @@
 	   	                   body = '$body',
 	   	                   category ='$category',
 	   	                   author = '$author',
-	   	                   tags = '$tags',
-	   	                   WHERE id =" .$id;
+	   	                   tags = '$tags'
+	   	                   WHERE id = "  .$id;
 		   
 		   $update_row = $db->update($query);
 	   }
@@ -53,7 +53,7 @@
 
 <div class="container">
   
-  <form method="post" action="/edit_post.php?id= "<?php echo  $id;?>>
+  <form role="form" method="post" action="edit_post.php?id= <?php echo  $id;?>">
   	
     <div class="form-group">
       <label >Post Title</label>
