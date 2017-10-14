@@ -3,6 +3,8 @@
 /*
  * Object Oriented programming
  */
+//Object Oriented Programming technique. Creat class with properties and methods.
+// Properties can be public or private
 
 class Database {
 	//Properties
@@ -12,10 +14,13 @@ class Database {
 	public $password = DB_PASS;
 	public $db_name = DB_NAME;
 	
+	//Lnk represents the mysqli object
+	
 	public $link;   //mysqli object
 	public $error;
 	
 	//Methods
+	// A constructor is a special method that auto executes when a new object is created from a class.
 	
 	public function __construct() {		
 	//Call Connect Function

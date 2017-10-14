@@ -1,4 +1,9 @@
 <?php  
+
+///Create Database Credentials assign them to constants rather than variables.
+/// Use the define() function to specify the name and value.
+/// Name constants using uppercase.
+
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');

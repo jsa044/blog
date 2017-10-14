@@ -3,8 +3,8 @@
 
 <?php 
 
-   //Create Database object
-          $db = new Database();
+   //Create Database object from Database class,  i.e.  calls the contructor method in the Database class
+          $db = new Database();  
 
    if(isset($_POST['submit']))  {
    	
