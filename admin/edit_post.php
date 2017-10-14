@@ -16,9 +16,7 @@
 		  $categories = $db->select($query);		  
   ?>
   
-  <?php 
-
-   
+  <?php   
 
    if(isset($_POST['submit']))  {
    	
@@ -44,12 +42,21 @@
 	   	                   tags = '$tags'
 	   	                   WHERE id = "  .$id;
 		   
-		   $update_row = $db->update($query);
+		   $update_row = $db->delete($query);
 	   }
 	
    }
 
  ?>
+ 
+ <?php   
+
+   if(isset($_POST['delete']))  {
+   	
+	   $query = "DELETE FROM posts WHERE id = ".$id;
+	   $delete_row = $db->delete($query);
+	
+   }?>
 
 <div class="container">
   
