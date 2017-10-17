@@ -21,17 +21,20 @@ class Database {
 	
 	//Methods
 	// A constructor is a special method that auto executes when a new object is created from a class.
+	// Does not have to be called. Initializes the properties of the object.
 	
 	public function __construct() {		
 	//Call Connect Function
 		$this->connect(); }
+	//When in a function and want to call another function use keyword -this.
+	//Within a class, $this stores a reference to the current object so you can access its props and methods.
 		
 	//Connector  It is private because we are calling it from within our class
 	
 	private function connect() {
 			$this->link= new mysqli($this->host, $this->username, $this->password, $this->db_name);
-			
-			if(!$this->link) {
+	//Make sure we are connected		
+			if(!$this->link) {                                                   //gives the mysql error.
 				$this->error = "Connection Failed:  ".$this->link->connect_error;
 				return false;
 			}
