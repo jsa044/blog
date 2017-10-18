@@ -19,4 +19,5 @@ function shortenText($text, $chars =450) {
 }
 
 
+
   ?>
