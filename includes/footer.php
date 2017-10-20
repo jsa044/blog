@@ -1,4 +1,4 @@
-
+<!--Footer -->
 </div><!-- /.blog-main -->
 <div class="col-sm-3 offset-sm-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
