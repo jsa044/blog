@@ -13,6 +13,7 @@
 		  //Run Query
 		  $category = $db->select($query);		  	  
   ?>
+         <!--    Checks for post.  If present gets title and date -->
   <?php if($posts) : ?>
   <?php  while($row = $posts->fetch_assoc()) :   ?>	
           <div class="blog-post">
