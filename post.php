@@ -2,7 +2,7 @@
 <?php  
           $id = $_GET['id'];
 
-          //Create Database object
+          //Create Database object for OOP
           $db = new Database();
 		  
 		  //Create Query
